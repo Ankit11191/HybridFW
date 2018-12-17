@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite1]">
+  <listeners>
+    <listener class-name="reportGeneration.TestListener"/>
+  </listeners>
+  <test name="Example Test Case(failed)">
+    <parameter name="BrowserName" value="Chrome"/>
+    <parameter name="TestCaseFileName" value="testing.xlsx;testing"/>
+    <classes>
+      <class name="featureSpecific.MainToExecuteActions">
+        <methods>
+          <include name="killOldBrowser"/>
+          <include name="AfterSuit"/>
+          <include name="getTestCount"/>
+          <include name="takeScreenShotOnFailure"/>
+          <include name="TestCase" invocation-numbers="0 1"/>
+          <include name="beforeClass"/>
+        </methods>
+      </class> <!-- featureSpecific.MainToExecuteActions -->
+    </classes>
+  </test> <!-- Example Test Case(failed) -->
+</suite> <!-- Failed suite [Suite1] -->

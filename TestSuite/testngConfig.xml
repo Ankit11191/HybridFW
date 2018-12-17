@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Suite1"> <!-- parallel="true" data-provider-thread-count="2" thread-count="2" -->
+	<listeners>
+        <listener class-name="reportGeneration.TestListener"/>
+<!--         <listener class-name="valueValidatoin.RetryListenerClass"/> -->
+    </listeners>
+   	<test name="Example Test Case">
+	    <parameter name = "TestCaseFileName" value="testing.xlsx;testing"/>
+	    <parameter name = "BrowserName" value="Chrome"/>
+		    <classes>
+		       <class name="runner.MainToExecuteActions"/>
+		    </classes>
+	</test>
+</suite> 
